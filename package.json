@@ -1,11 +1,11 @@
 {
   "name": "census-boundaries",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Utilities for generating more JavaScript-friendly formats from U.S. Census Bureau Cartographic Boundary Shapefiles",
   "main": "index.js",
-  "respository": {
-     "type": "git",
-     "url": "git://github.com/ghing/census-boundaries.git"     
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ghing/census-boundaries.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -22,9 +22,10 @@
   "author": "Geoff Hing <geoffhing@gmail.com>",
   "license": "MIT",
   "dependencies": {
+    "duplexify": "^3.5.0",
     "minimist": "^1.2.0",
     "request": "^2.69.0",
-    "shp2json": "git://github.com/ghing/shp2json.git#current-gdal",
+    "shp2json": "^1.2.1",
     "us": "^1.1.1"
   }
 }
