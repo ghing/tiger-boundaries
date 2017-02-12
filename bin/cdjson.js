@@ -4,12 +4,13 @@ var fs = require('fs');
 
 var parseArgs = require('minimist');
 
-var getCountyGeoJSON = require('../').getCountyGeoJSON;
+var getCongressionalDistrictGeoJSON = require('../').getCongressionalDistrictGeoJSON;
 
 var argv = parseArgs(process.argv.slice(2));
 
-var state = argv.state;
 var resolution = argv._[0];
+var congress = argv._[1];
+var state = argv.state;
 
 var out = process.stdout;
 
@@ -21,6 +22,6 @@ if (typeof state == 'string') {
   state = [state];
 }
 
-getCountyGeoJSON(resolution, state, function(err, data) {
+getCongressionalDistrictGeoJSON(resolution, congress, state, function(err, data) {
   out.write(JSON.stringify(data));
 });
